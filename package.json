@@ -26,6 +26,7 @@
   "dependencies": {
     "mob-api": "github:mobyourlife/v4-api",
     "mobv27-api": "github:mobyourlife/v3-api",
+    "mongoose": "^4.4.8",
     "standard": "^6.0.8"
   }
 }
