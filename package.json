@@ -4,7 +4,7 @@
   "description": "Import websites from the old schema to the new schema.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run legacy | npm run upgrade",
+    "start": "npm run legacy | npm run upgrade | npm run new-import",
     "legacy": "node bin/legacy.js",
     "upgrade": "node bin/upgrade.js",
     "new-import": "node bin/new-import.js",
