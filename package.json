@@ -4,7 +4,9 @@
   "description": "Import websites from the old schema to the new schema.",
   "main": "index.js",
   "scripts": {
-    "start:legacy-export": "node bin/legacy-export.js",
+    "start": "npm run legacy-export | npm run upgrade-schema",
+    "legacy-export": "node bin/legacy-export.js",
+    "upgrade-schema": "node bin/upgrade-schema.js",
     "test": "standard"
   },
   "repository": {
@@ -26,6 +28,7 @@
   "homepage": "https://github.com/mobyourlife/v4-import#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "get-stdin": "^5.0.1",
     "mob-api": "github:mobyourlife/v4-api",
     "mobv27-api": "github:mobyourlife/v3-api",
     "mongoose": "^4.4.8",
