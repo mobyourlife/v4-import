@@ -1,0 +1,26 @@
+{
+  "name": "mob-import",
+  "version": "4.0.0",
+  "description": "Import websites from the old schema to the new schema.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobyourlife/v4-import.git"
+  },
+  "keywords": [
+    "mob",
+    "your",
+    "life",
+    "import",
+    "schema"
+  ],
+  "author": "Filipe Oliveira <contato@fmoliveira.com.br>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mobyourlife/v4-import/issues"
+  },
+  "homepage": "https://github.com/mobyourlife/v4-import#readme"
+}
