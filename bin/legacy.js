@@ -1,13 +1,13 @@
 'use strict'
 
 // Load modules
-const Legacy = require('../lib/legacy-exporter')
+const LegacyExporter = require('../lib/legacy-exporter')
 
 /**
  * Export legacy data.
  */
 function exportLegacy () {
-  let legacy = new Legacy()
+  let legacy = new LegacyExporter()
 
   legacy.fetchData()
   .then((data) => {
