@@ -13,9 +13,7 @@ function migrateData () {
   legacy.fetchData()
   .then(upgrade)
   .then((data) => {
-    console.log('Migration Results:')
-    console.log('- Users:', data.users.length)
-    console.log('- Websites:', data.sites.length)
+    process.stdout.write(JSON.stringify(data))
   })
 }
 
