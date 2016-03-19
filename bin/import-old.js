@@ -1,14 +1,16 @@
 'use strict'
 
-// Initialise import module
+// Load importer module
 const Importer = require('../lib/importer')
-const old = new Importer()
 
 /**
  * Fetch data from the legacy database.
  */
 function fetchData () {
   let promise = new Promise((resolve, reject) => {
+    // Initialise importer
+    let old = new Importer()
+
     // Start jobs
     let users = old.getUsers()
     let fanpages = old.getFanpages()
@@ -37,7 +39,10 @@ function fetchData () {
   return promise
 }
 
-// Run the import process
-fetchData().then((data) => {
-  process.stdout.write(JSON.stringify(data))
-})
+// Export data to the provided stream
+module.exports = (stream) => {
+  fetchData().then((data) => {
+    let json = JSON.stringify(data)
+    stream.write(json)
+  })
+}
