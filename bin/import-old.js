@@ -37,17 +37,7 @@ function fetchData () {
   return promise
 }
 
-/**
- * Print data in console for debugging purposes.
- * @param  {Object} data Imported data.
- */
-function printData (data) {
-  console.log('=== COMMENCING IMPORT PROCESS ===')
-  console.log('Users:', data.users.length)
-  console.log('Fanpages:', data.fanpages.length)
-  console.log('Domains:', data.domains.length)
-  console.log('Tickets:', data.tickets.length)
-}
-
 // Run the import process
-fetchData().then(printData)
+fetchData().then((data) => {
+  process.stdout.write(JSON.stringify(data))
+})
