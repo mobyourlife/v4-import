@@ -6,7 +6,7 @@ const LegacyExporter = require('../lib/legacy-exporter')
 /**
  * Export legacy data.
  */
-function exportLegacy () {
+function export () {
   let legacy = new LegacyExporter()
 
   legacy.fetchData()
@@ -16,4 +16,4 @@ function exportLegacy () {
 }
 
 // Execute data export
-exportLegacy()
+export()
