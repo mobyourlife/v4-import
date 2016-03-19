@@ -4,7 +4,7 @@
   "description": "Import websites from the old schema to the new schema.",
   "main": "index.js",
   "scripts": {
-    "start:legacy": "node bin/legacy.js",
+    "start:legacy-export": "node bin/legacy-export.js",
     "test": "standard"
   },
   "repository": {
