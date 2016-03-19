@@ -1,7 +1,7 @@
 'use strict'
 
 // Load modules
-const Legacy = require('../lib/legacy')
+const Legacy = require('../lib/legacy-exporter')
 
 /**
  * Export legacy data.

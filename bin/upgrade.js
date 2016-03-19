@@ -2,16 +2,16 @@
 
 // Load modules
 const getStdin = require('get-stdin')
-const upgrade = require('../lib/upgrade')
+const upgradeSchema = require('../lib/upgrade-schema')
 
 /**
  * Upgrade legacy schema to the new schema.
  */
-function upgradeSchema () {
+function upgrade () {
   getStdin()
   .then((str) => {
     let data = JSON.parse(str)
-    return upgrade(data)
+    return upgradeSchema(data)
   })
   .then((data) => {
     process.stdout.write(JSON.stringify(data))
@@ -19,4 +19,4 @@ function upgradeSchema () {
 }
 
 // Execute schema upgrade
-upgradeSchema()
+upgrade()
