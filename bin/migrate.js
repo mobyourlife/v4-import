@@ -2,16 +2,16 @@
 
 // Load modules
 const Importer = require('../lib/importer')
-const migrate = require('../lib/migrate')
+const upgrade = require('../lib/upgrade')
 
 /**
- * Migrate data from the legacy schema to the new schema.
+ * Upgrade data from the legacy schema to the new schema.
  */
-function migrateData () {
+function upgradeData () {
   let legacy = new Importer()
 
   legacy.fetchData()
-  .then(migrate)
+  .then(upgrade)
   .then((data) => {
     console.log('Migration Results:')
     console.log('- Users:', data.users.length)
