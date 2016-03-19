@@ -33,7 +33,8 @@ function fetchData () {
  * @param  {Object} data Imported data.
  */
 function printData (data) {
-  console.log(data)
+  console.log('=== COMMENCING IMPORT PROCESS ===')
+  console.log('Fanpages:', data.fanpages.length)
 }
 
 // Run the import process
