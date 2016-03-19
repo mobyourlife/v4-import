@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/mobyourlife/v4-import/issues"
   },
-  "homepage": "https://github.com/mobyourlife/v4-import#readme"
+  "homepage": "https://github.com/mobyourlife/v4-import#readme",
+  "dependencies": {
+    "mob-api": "github:mobyourlife/v4-api",
+    "mobv27-api": "github:mobyourlife/v3-api"
+  }
 }
