@@ -9,7 +9,14 @@ const migrate = require('../lib/migrate')
  */
 function migrateData () {
   let legacy = new Importer()
-  legacy.fetchData().then(migrate)
+
+  legacy.fetchData()
+  .then(migrate)
+  .then((data) => {
+    console.log('Migration Results:')
+    console.log('- Users:', data.users.length)
+    console.log('- Websites:', data.sites.length)
+  })
 }
 
 // Execute data migration
