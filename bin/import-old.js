@@ -12,18 +12,21 @@ function fetchData () {
     // Start jobs
     let fanpages = old.getFanpages()
     let domains = old.getDomains()
+    let tickets = old.getTickets()
 
     // Group jobs
     let promises = []
     promises.push(fanpages)
     promises.push(domains)
+    promises.push(tickets)
 
     // Await for all promises
     Promise.all(promises).then((data) => {
       // Return a friendly object with everything
       resolve({
         fanpages: data[0],
-        domains: data[1]
+        domains: data[1],
+        tickets: data[2]
       })
     }, reject)
   })
@@ -39,6 +42,7 @@ function printData (data) {
   console.log('=== COMMENCING IMPORT PROCESS ===')
   console.log('Fanpages:', data.fanpages.length)
   console.log('Domains:', data.domains.length)
+  console.log('Tickets:', data.tickets.length)
 }
 
 // Run the import process
