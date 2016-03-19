@@ -7,7 +7,7 @@ const upgrade = require('../lib/upgrade')
 /**
  * Upgrade data from the legacy schema to the new schema.
  */
-function upgradeData () {
+function migrateData () {
   let legacy = new Importer()
 
   legacy.fetchData()
