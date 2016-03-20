@@ -15,9 +15,6 @@ function importData () {
     let data = JSON.parse(str)
     return newImport.saveData(data)
   })
-  .then((results) => {
-    process.stdout.write(JSON.stringify(data))
-  })
 }
 
 // Execute data export
